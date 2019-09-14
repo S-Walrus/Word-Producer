@@ -3,7 +3,7 @@ import pickle
 from random import choice
 
 class WordProducer:
-    
+   
     def __init__(self, k):
         self.d = {}
         if type(k) == int:
@@ -16,7 +16,7 @@ class WordProducer:
             raise TypeError('You need to pass int or array of bool instead of {}'.format(str(type(k))))
     
     def fit(self, word_list):
-        prefix = '_' * l
+        prefix = '_' * self.l
         for word in tqdm(word_list):
             word = prefix + word + '.'
             for i in range(len(word) - self.l):
